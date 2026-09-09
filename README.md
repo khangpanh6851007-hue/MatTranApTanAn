@@ -30,7 +30,7 @@ Website chính thức của **Ban Công Tác Mặt Trận Ấp Tân An**, xã T�
 4. Truy cập đường dẫn công khai do GitHub cung cấp sau 1-2 phút.
 
 ## 🔐 Thông Tin Quản Trị
-* **Mã khóa đăng bài (Key):** `KhangPanh68`
+* **Mã khóa đăng bài (Key):** `******
 
 ---
 © 2026 Ban Công Tác Mặt Trận Ấp Tân An. Phát triển cho cộng đồng.
