@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mặt Trận Tổ Quốc Ấp Tân An - Tân Thành Bình</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#da251d',
+                        secondary: '#ffcc00',
+                        darkText: '#1f2937'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-darkText font-sans antialiased">
+
+    <!-- Header / Navigation -->
+    <header class="bg-white sticky top-0 z-50 shadow-sm border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold text-lg shadow-md">
+                        <i class="fa-solid fa-star text-secondary"></i>
+                    </div>
+                    <div>
+                        <span class="block font-bold text-base sm:text-lg text-primary tracking-tight">MTTQ ẤP TÂN AN</span>
+                        <span class="block text-xs text-slate-500">Xã Tân Thành Bình, Tỉnh Vĩnh Long</span>
+                    </div>
+                </div>
+                <nav class="hidden md:flex space-x-8 text-sm font-medium">
+                    <a href="#home" class="text-primary transition hover:text-red-700">Trang Chủ</a>
+                    <a href="#about" class="text-slate-600 transition hover:text-primary">Giới Thiệu</a>
+                    <a href="#news" class="text-slate-600 transition hover:text-primary">Bài Viết Mới</a>
+                    <a href="#contact" class="text-slate-600 transition hover:text-primary">Liên Hệ</a>
+                </nav>
+                <div class="flex items-center space-x-3">
+                    <button onclick="toggleModal(true)" class="bg-primary text-white text-xs sm:text-sm font-semibold px-3 py-2 rounded-lg shadow-sm hover:bg-red-700 transition flex items-center gap-1.5">
+                        <i class="fa-solid fa-plus"></i> Đăng Bài
+                    </button>
+                    <div class="md:hidden">
+                        <button id="menu-btn" class="text-slate-700 focus:outline-none">
+                            <i class="fa-solid fa-bars text-xl"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-100 px-4 pt-2 pb-4 space-y-2">
+            <a href="#home" class="block py-2 text-primary font-medium">Trang Chủ</a>
+            <a href="#about" class="block py-2 text-slate-600">Giới Thiệu</a>
+            <a href="#news" class="block py-2 text-slate-600">Bài Viết Mới</a>
+            <a href="#contact" class="block py-2 text-slate-600">Liên Hệ</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative bg-gradient-to-br from-red-900 via-primary to-red-800 text-white py-20 px-4 overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#ffcc00_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-5xl mx-auto text-center relative z-10">
+            <span class="inline-block bg-white/10 backdrop-blur-md text-secondary text-xs sm:text-sm font-semibold px-4 py-1.5 rounded-full mb-4 uppercase tracking-wider border border-white/20">
+                Cổng Thông Tin Điện Tử
+            </span>
+            <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight mb-4 leading-tight">
+                Ban Công Tác Mặt Trận Ấp Tân An
+            </h1>
+            <p class="text-base sm:text-lg text-red-100 max-w-2xl mx-auto mb-8 font-light">
+                Phát huy sức mạnh khối đại đoàn kết toàn dân tộc, xây dựng đời sống văn hóa, nông thôn mới tại Xã Tân Thành Bình, Tỉnh Vĩnh Long.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#news" class="bg-secondary text-darkText font-semibold px-6 py-3 rounded-xl shadow-lg hover:bg-yellow-400 transition transform hover:-translate-y-0.5">
+                    Xem Bài Viết Mới <i class="fa-solid fa-arrow-down ml-2"></i>
+                </a>
+                <a href="#about" class="bg-white/10 backdrop-blur-md border border-white/30 text-white font-semibold px-6 py-3 rounded-xl hover:bg-white/20 transition">
+                    Tìm Hiểu Thêm
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About MTTQ Vietnam Section -->
+    <section id="about" class="py-16 px-4 max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-3">Về Mặt Trận Tổ Quốc Việt Nam</h2>
+            <div class="w-16 h-1 bg-primary mx-auto rounded-full mb-4"></div>
+            <p class="text-slate-600 max-w-xl mx-auto text-sm sm:text-base">
+                Tổ chức liên minh chính trị, liên hiệp tự nguyện của tổ chức chính trị, các tổ chức chính trị - xã hội, tổ chức xã hội và các cá nhân tiêu biểu.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition">
+                <div class="w-12 h-12 bg-red-50 text-primary rounded-xl flex items-center justify-center text-xl mb-4 font-bold">
+                    <i class="fa-solid fa-hands-holding-child"></i>
+                </div>
+                <h3 class="text-lg font-bold mb-2 text-slate-800">Đại Đoàn Kết</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                    Tập hợp, đoàn kết mọi tầng lớp nhân dân, phát huy truyền thống yêu nước, ý chí tự lực tự cường dân tộc.
+                </p>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition">
+                <div class="w-12 h-12 bg-amber-50 text-amber-600 rounded-xl flex items-center justify-center text-xl mb-4 font-bold">
+                    <i class="fa-solid fa-scale-balanced"></i>
+                </div>
+                <h3 class="text-lg font-bold mb-2 text-slate-800">Giám Sát & Phản Biện</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                    Thực hiện dân chủ, đại diện bảo vệ quyền và lợi ích hợp pháp, chính đáng của nhân dân, tham gia xây dựng Đảng và Nhà nước.
+                </p>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition">
+                <div class="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-xl flex items-center justify-center text-xl mb-4 font-bold">
+                    <i class="fa-solid fa-seedling"></i>
+                </div>
+                <h3 class="text-lg font-bold mb-2 text-slate-800">Thi đua yêu nước</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                    Động viên nhân dân tham gia các phong trào thi đua phát triển kinh tế, xây dựng đời sống văn hóa ở khu dân cư.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Article Section with LocalStorage Dynamic Rendering -->
+    <section id="news" class="bg-slate-100 py-16 px-4">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-12">
+                <span class="text-primary font-semibold text-xs sm:text-sm uppercase tracking-wider">Tin Tức - Hoạt Động</span>
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-1 mb-3">Bài Viết Mới Nhất</h2>
+                <div class="w-16 h-1 bg-primary mx-auto rounded-full"></div>
+            </div>
+
+            <!-- Dynamic Articles Container -->
+            <div id="articles-container">
+                <!-- Articles injected via JavaScript from localStorage -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Form Đăng Bài (Yêu cầu Key: KhangPanh68) -->
+    <div id="article-modal" class="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl shadow-xl w-full max-w-lg overflow-hidden border border-slate-100 animate-fadeIn">
+            <div class="bg-primary px-6 py-4 flex justify-between items-center text-white">
+                <h3 class="font-bold text-base sm:text-lg flex items-center gap-2">
+                    <i class="fa-solid fa-pen-to-square"></i> Đăng Bài Viết Mới
+                </h3>
+                <button onclick="toggleModal(false)" class="text-white hover:text-secondary text-xl focus:outline-none">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <form id="article-form" onsubmit="handlePostArticle(event)" class="p-6 space-y-4">
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Khóa bảo mật (Key):</label>
+                    <input type="password" id="post-key" required placeholder="Nhập khóa quản trị..." class="w-full px-3.5 py-2.5 text-sm border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/50">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Tiêu đề bài viết:</label>
+                    <input type="text" id="post-title" required placeholder="Nhập tiêu đề..." class="w-full px-3.5 py-2.5 text-sm border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/50">
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Danh mục:</label>
+                        <input type="text" id="post-category" value="Hoạt Động Ấp" required class="w-full px-3.5 py-2.5 text-sm border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/50">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Tác giả / Ban:</label>
+                        <input type="text" id="post-author" value="Ban Công Tác Mặt Trận" required class="w-full px-3.5 py-2.5 text-sm border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/50">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 uppercase mb-1">Nội dung chi tiết:</label>
+                    <textarea id="post-content" rows="4" required placeholder="Nhập nội dung bài viết..." class="w-full px-3.5 py-2.5 text-sm border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/50"></textarea>
+                </div>
+                <div id="error-msg" class="text-xs text-red-600 font-medium hidden"></div>
+                <div class="flex justify-end space-x-3 pt-2">
+                    <button type="button" onclick="toggleModal(false)" class="px-4 py-2 text-sm text-slate-600 hover:bg-slate-100 rounded-xl font-medium transition">Hủy</button>
+                    <button type="submit" class="px-5 py-2 bg-primary text-sm text-white font-semibold rounded-xl shadow hover:bg-red-700 transition">Đăng Bài</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 px-4 max-w-4xl mx-auto text-center">
+        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-3">Thông Tin Liên Hệ</h2>
+        <div class="w-16 h-1 bg-primary mx-auto rounded-full mb-6"></div>
+        <p class="text-slate-600 text-sm sm:text-base mb-8">
+            Mọi ý kiến đóng góp, phản ánh hoặc liên hệ công tác vui lòng gửi về Ban Công Tác Mặt Trận Ấp Tân An.
+        </p>
+        <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-200 inline-block text-left w-full max-w-lg space-y-4">
+            <div class="flex items-start space-x-3">
+                <i class="fa-solid fa-location-dot text-primary mt-1"></i>
+                <div>
+                    <span class="block font-semibold text-slate-800 text-sm">Địa chỉ:</span>
+                    <span class="text-slate-600 text-sm">Ấp Tân An, Xã Tân Thành Bình, Tỉnh Vĩnh Long</span>
+                </div>
+            </div>
+            <div class="flex items-start space-x-3">
+                <i class="fa-solid fa-building-columns text-primary mt-1"></i>
+                <div>
+                    <span class="block font-semibold text-slate-800 text-sm">Đơn vị cấp trên:</span>
+                    <span class="text-slate-600 text-sm">UBMTTQ Việt Nam Xã Tân Thành Bình</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-8 text-center text-xs sm:text-sm border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4">
+            <p>&copy; 2026 Ban Công Tác Mặt Trận Ấp Tân An - Xã Tân Thành Bình.</p>
+            <p class="mt-1 text-slate-500">Được phát triển Bản Quyền Thuộc Về KhangPanh68.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts: LocalStorage & Dynamic Features -->
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Default Article data if LocalStorage is empty
+        const DEFAULT_ARTICLES = [
+            {
+                id: 1,
+                title: 'Ấp Tân An đẩy mạnh phong trào "Toàn dân đoàn kết xây dựng nông thôn mới, đô thị văn minh"',
+                category: 'Hoạt Động Ấp',
+                date: '09/09/2026',
+                author: 'Ban Công Tác Mặt Trận',
+                content: 'Thực hiện chương trình phối hợp và thống nhất hành động năm 2026, Ban Công tác Mặt trận ấp Tân An, xã Tân Thành Bình đã triển khai nhiều mô hình thiết thực nhằm nâng cao chất lượng đời sống vật chất và tinh thần cho nhân dân. Điểm nhấn là công tác vận động nhân dân chỉnh trang cảnh quan môi trường, phát quang bụi rậm tuyến đường giao thông nông thôn và xây dựng tuyến đường sáng - xanh - sạch - đẹp.'
+            }
+        ];
+
+        // Load articles from localStorage
+        function getStoredArticles() {
+            const data = localStorage.getItem('mttq_tanan_articles');
+            return data ? JSON.parse(data) : DEFAULT_ARTICLES;
+        }
+
+        // Render articles to DOM
+        function renderArticles() {
+            const container = document.getElementById('articles-container');
+            const articles = getStoredArticles();
+            container.innerHTML = '';
+
+            articles.forEach((art) => {
+                const articleHTML = `
+                    <article class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden transition hover:shadow-md mb-6">
+                        <div class="p-6 sm:p-8">
+                            <div class="flex flex-wrap items-center gap-3 text-xs text-slate-500 mb-3">
+                                <span class="bg-red-50 text-primary font-semibold px-2.5 py-1 rounded-md">${art.category}</span>
+                                <span><i class="fa-regular fa-calendar-days mr-1"></i> ${art.date}</span>
+                                <span><i class="fa-regular fa-user mr-1"></i> ${art.author}</span>
+                            </div>
+                            <h3 class="text-xl sm:text-2xl font-bold text-slate-900 mb-4 leading-snug">
+                                ${art.title}
+                            </h3>
+                            <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
+                                ${art.content}
+                            </p>
+                            <div class="border-t border-slate-100 pt-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                                <div class="text-xs text-slate-500">
+                                    Địa bàn: <span class="font-medium text-slate-700">Ấp Tân An, Xã Tân Thành Bình, Tỉnh Vĩnh Long</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                `;
+                container.innerHTML += articleHTML;
+            });
+        }
+
+        // Modal Controls
+        function toggleModal(show) {
+            const modal = document.getElementById('article-modal');
+            const errorMsg = document.getElementById('error-msg');
+            if (show) {
+                modal.classList.remove('hidden');
+                errorMsg.classList.add('hidden');
+                document.getElementById('article-form').reset();
+            } else {
+                modal.classList.add('hidden');
+            }
+        }
+
+        // Handle Posting New Article with Key verification & LocalStorage save
+        function handlePostArticle(event) {
+            event.preventDefault();
+            const keyInput = document.getElementById('post-key').value.trim();
+            const errorDiv = document.getElementById('error-msg');
+
+            // Verify Key
+            if (keyInput !== 'KhangPanh68') {
+                errorDiv.textContent = 'Mã khóa (Key) không chính xác! Vui lòng thử lại.';
+                errorDiv.classList.remove('hidden');
+                return;
+            }
+
+            const title = document.getElementById('post-title').value.trim();
+            const category = document.getElementById('post-category').value.trim();
+            const author = document.getElementById('post-author').value.trim();
+            const content = document.getElementById('post-content').value.trim();
+
+            const currentDate = new Date().toLocaleDateString('vi-VN');
+
+            const newArticle = {
+                id: Date.now(),
+                title,
+                category,
+                author,
+                date: currentDate,
+                content
+            };
+
+            const articles = getStoredArticles();
+            articles.unshift(newArticle); // Add new article to the beginning
+            localStorage.setItem('mttq_tanan_articles', JSON.stringify(articles));
+
+            // Refresh UI and close modal
+            renderArticles();
+            toggleModal(false);
+            alert('Đăng bài viết mới thành công!');
+        }
+
+        // Initial render on page load
+        window.addEventListener('DOMContentLoaded', renderArticles);
+    </script>
+</body>
+</html>
